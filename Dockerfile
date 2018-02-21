@@ -1,8 +1,8 @@
-FROM alpine:3.3
+FROM alpine:3.7
 
 # CLI
-ENV VERSION 1.3.2
+ENV VERSION 1.3.2-r0
 
-RUN apk --update add nodejs\<5 && npm install -g yarn@$VERSION && rm -rf /var/cache/apk/*
+RUN apk --update add yarn=$VERSION && rm -rf /var/cache/apk/*
 
 ENTRYPOINT [ "yarn" ]
