@@ -1,7 +1,7 @@
-FROM alpine:3.7
+FROM alpine:edge
 
 # CLI
-ENV VERSION 1.3.2-r0
+ENV VERSION 1.5.1-r0
 
 RUN apk --update add yarn=$VERSION && rm -rf /var/cache/apk/*
 
